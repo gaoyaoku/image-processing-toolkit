@@ -1,0 +1,9 @@
+fastapi[all]
+numpy
+pandas
+pillow
+shapely
+gdal
+fiona
+pyproj
+opencv-python

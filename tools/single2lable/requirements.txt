@@ -1,0 +1,6 @@
+fiona==1.9.4
+pyproj==3.6.0
+shapely==2.0.1
+numpy==1.24.3
+pandas==2.0.2
+pillow==9.5.0

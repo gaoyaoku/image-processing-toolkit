@@ -1,0 +1,18 @@
+<VRTDataset rasterXSize="25687" rasterYSize="19111">
+  <SRS dataAxisToSRSAxisMapping="2,1">GEOGCS["China Geodetic Coordinate System 2000",DATUM["China_2000",SPHEROID["CGCS2000",6378137,298.257222101004,AUTHORITY["EPSG","1024"]],AUTHORITY["EPSG","1043"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4490"]]</SRS>
+  <GeoTransform>  1.1664734585599466e+02,  1.9999999999999944e-05,  0.0000000000000000e+00,  3.9940912972908947e+01,  0.0000000000000000e+00, -1.9999999999999825e-05</GeoTransform>
+  <VRTRasterBand dataType="Int16" band="1">
+    <NoDataValue>0</NoDataValue>
+    <HideNoDataValue>1</HideNoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">../data/road6_12/road.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25687" RasterYSize="19111" DataType="Int16" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="25687" ySize="19111" />
+      <DstRect xOff="0" yOff="0" xSize="25687" ySize="19111" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+  <OverviewList resampling="nearest">2 4 8 16 32 64 128</OverviewList>
+</VRTDataset>
