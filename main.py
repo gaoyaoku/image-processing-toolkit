@@ -243,10 +243,13 @@ def main():
         f7()
     elif choice == 8:
         f8()
+    else:
+        print("请输入正确的序号！")
 
 
-    # clear_screen()
 
 if __name__ == '__main__':
     while True:
         main()
+        input("回车以继续！")
+        clear_screen()
