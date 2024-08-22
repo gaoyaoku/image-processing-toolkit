@@ -1,0 +1,33 @@
+<VRTDataset rasterXSize="35564" rasterYSize="36399">
+  <SRS dataAxisToSRSAxisMapping="2,1">GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</SRS>
+  <GeoTransform>  1.1664963734070828e+02,  2.9999999999999720e-05,  0.0000000000000000e+00,  4.0245658037658700e+01,  0.0000000000000000e+00, -2.9999999999999662e-05</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <NoDataValue>0</NoDataValue>
+    <HideNoDataValue>1</HideNoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/sar/sar2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="24666" RasterYSize="20526" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="24666" ySize="20526" />
+      <DstRect xOff="7088.77984013068" yOff="15872.8437956632" xSize="24666" ySize="20526" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/sar/sar1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="24780" RasterYSize="20511" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="24780" ySize="20511" />
+      <DstRect xOff="0" yOff="3017.4805849432" xSize="24780" ySize="20511" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/sar/sar3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="24856" RasterYSize="20523" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="24855.7693769977" ySize="20523" />
+      <DstRect xOff="10708.2306230023" yOff="0" xSize="24855.7693769977" ySize="20523" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

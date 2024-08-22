@@ -38,12 +38,6 @@ def process_folder(input_folder, output_folder, brightness_factor):
             print(f"Processed {filename}")
 
 
-if __name__ == "__main__":
-    # 输入文件夹路径
-    input_folder = r"P:\project_sar_road\data\road6_26\train\images_optics"
-    # 输出文件夹路径
-    output_folder = r"P:\project_sar_road\data\road7_2\train\images_optics"
-    # 亮度增加的倍数（1.0表示不变，2.0表示亮度加倍）
-    brightness_factor = 1.8
+def main(original_path, enchanced_path,brightness_factor):
     # 处理文件夹中的所有tif图像
-    process_folder(input_folder, output_folder, brightness_factor)
+    process_folder(original_path, enchanced_path, brightness_factor)

@@ -1,4 +1,6 @@
+# backend
 fastapi[all]
+# tools
 numpy
 pandas
 pillow
@@ -7,3 +9,7 @@ gdal
 fiona
 pyproj
 opencv-python
+matplotlib
+scikit-image
+# terminal
+tabulate

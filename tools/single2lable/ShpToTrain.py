@@ -3,7 +3,7 @@ import math
 from osgeo import gdal
 from osgeo import ogr
 from PIL import Image, ImageDraw
-from utensil import specifics, counter
+from .utensil import specifics, counter
 
 
 class DataSet:

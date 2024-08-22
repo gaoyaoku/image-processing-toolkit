@@ -1,7 +1,16 @@
+import os
 from shapely.geometry import Polygon
 from osgeo import gdal
 from osgeo import ogr
 
+###########################################Begin
+# 获取当前目录 utensil
+current_directory = os.path.dirname(__file__)
+# 获取上一级目录 multi2label
+parent_directory = os.path.dirname(current_directory)
+# 构造绝对路径 tmp
+tmp_directory = os.path.join(parent_directory, 'tmp')
+###########################################End
 
 def get_image_transform(img):
     transform = (img.GetGeoTransform())
@@ -34,7 +43,7 @@ def merge_duplicate_lines(input_file, output_file):  # 合并相同项目
 
 def getAttribute(dataSource):
     layer = dataSource.GetLayer(0)
-    output_txt_file = "./tmp/Attribute.txt"
+    output_txt_file = f"{tmp_directory}/Attribute.txt"
     with open(output_txt_file, "w") as txt_file:
         # 写入属性列名
         layerDefinition = layer.GetLayerDefn()
@@ -46,7 +55,7 @@ def getAttribute(dataSource):
             txt_file.write(",".join(attribute_values) + "\n")
     # 7. 关闭数据源
     dataSource = None
-    merge_duplicate_lines("./tmp/Attribute.txt", "./tmp/Attribute.txt")
+    merge_duplicate_lines(f"{tmp_directory}/Attribute.txt", f"{tmp_directory}/Attribute.txt")
 
 
 def grouped_image(image_path):

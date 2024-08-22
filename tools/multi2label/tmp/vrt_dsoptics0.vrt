@@ -1,16 +1,16 @@
-<VRTDataset rasterXSize="24666" rasterYSize="20526">
+<VRTDataset rasterXSize="65494" rasterYSize="48150">
   <SRS dataAxisToSRSAxisMapping="2,1">GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</SRS>
-  <GeoTransform>  1.1686230073591220e+02,  3.0000000000000113e-05,  0.0000000000000000e+00,  3.9769472723788809e+01,  0.0000000000000000e+00, -3.0000000000000041e-05</GeoTransform>
+  <GeoTransform>  1.1629451471285014e+02,  2.0000000000000103e-05,  0.0000000000000000e+00,  3.9974586405385999e+01,  0.0000000000000000e+00, -2.0000000000000019e-05</GeoTransform>
   <VRTRasterBand dataType="Byte" band="1">
     <NoDataValue>0</NoDataValue>
     <HideNoDataValue>1</HideNoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/sar/sar2.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/optics/GF6_PMS_E116.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="24666" RasterYSize="20526" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0" yOff="0" xSize="24666" ySize="20526" />
-      <DstRect xOff="0" yOff="0" xSize="24666" ySize="20526" />
+      <SourceProperties RasterXSize="65494" RasterYSize="48150" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="65494" ySize="48150" />
+      <DstRect xOff="0" yOff="0" xSize="65494" ySize="48150" />
       <NODATA>0</NODATA>
     </ComplexSource>
   </VRTRasterBand>

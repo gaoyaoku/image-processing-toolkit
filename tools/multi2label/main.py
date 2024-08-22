@@ -83,19 +83,39 @@ def read_first_line_to_list(input_file):
 
     return p
 
+def list_all_files(directory):
+    file_paths = []
+
+    for root, _, files in os.walk(directory):
+        for file in files:
+            full_path = os.path.join(root, file)
+            file_paths.append(full_path)
+
+    return file_paths
+
+def make_directories(base_path, folder_names):
+    folder_paths = {}
+
+    for folder in folder_names:
+        # 创建完整的文件夹路径
+        folder_path = os.path.join(base_path, folder)
+
+        # 如果文件夹不存在，则创建
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+
+        # 将文件夹名和路径添加到字典中
+        folder_paths[folder] = folder_path
+
+    return folder_paths
 
 def main(shapefile_path: str,
-         sar_path: list[str],
-         optics_path: list[str],
+         sar_path: str,
+         optics_path: str,
+         output_path: str,
 
-         output_label_path: str,
-         output_sar_path: str,
-         output_optics_path: str,
-
-         output_rgb_path: str,
          block_size: int = 512,
-         stride: int = 0.5,
-
+         stride: float = 0.5,
          UCS: bool = False,
          tif2RGB: bool = False):
     """
@@ -111,6 +131,20 @@ def main(shapefile_path: str,
     tif2RGB : 是否将16位遥感图像压缩至8位
     OutputImageRGBPath : 8位输出光学原图路径
     """
+    ###########################################Begin
+
+    sar_path = list_all_files(sar_path)
+    optics_path = list_all_files(optics_path)
+    # print(sar_path)
+    # print(optics_path)
+
+    folders_paths = make_directories(output_path, ["sar", "optics", "label", "rgb"])
+    output_label_path = folders_paths["label"]
+    output_sar_path = folders_paths["sar"]
+    output_optics_path = folders_paths["optics"]
+    output_rgb_path = folders_paths["rgb"]
+    # print(output_label_path)
+    ###########################################End
     # 数据预处理
     if UCS:
         sar_path, optics_path = pretreatment.coordinate_conversion(sar_path, optics_path)
@@ -123,13 +157,14 @@ def main(shapefile_path: str,
     optics, optics_points = pretreatment.img_input(optics_path, "optics")
 
     specifics.getAttribute(shapefile)
+    ###########################################Begin
     # 读取矢量数据的txt属性表
     # input_file = "./tmp/Attribute.txt"
     # 获取当前模块的目录
     current_directory = os.path.dirname(__file__)
-    # 构造 data/config.json 文件的绝对路径
+    # 构造绝对路径
     input_file = os.path.join(current_directory, 'tmp', 'Attribute.txt')
-
+    ###########################################End
     p = read_first_line_to_list(input_file)
 
     for i in range(len(sar)):

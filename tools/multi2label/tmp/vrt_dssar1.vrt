@@ -1,0 +1,17 @@
+<VRTDataset rasterXSize="12566" rasterYSize="23006">
+  <SRS dataAxisToSRSAxisMapping="1,2">LOCAL_CS["unnamed",UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SRS>
+  <GeoTransform> -5.0000000000000000e-01,  1.0000000000000000e+00,  0.0000000000000000e+00,  5.0000000000000000e-01,  0.0000000000000000e+00, -1.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <NoDataValue>0</NoDataValue>
+    <HideNoDataValue>1</HideNoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/sar/sar4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12566" RasterYSize="23006" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="12566" ySize="23006" />
+      <DstRect xOff="0" yOff="0" xSize="12566" ySize="23006" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

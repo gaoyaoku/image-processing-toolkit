@@ -1,10 +1,18 @@
 from shapely.geometry import Polygon
-from utensil import specifics
+from . import specifics
 import fiona
 import pyproj
 from osgeo import gdal, ogr, osr
 import os
 
+###########################################Begin
+# 获取当前目录 utensil
+current_directory = os.path.dirname(__file__)
+# 获取上一级目录 multi2label
+parent_directory = os.path.dirname(current_directory)
+# 构造绝对路径 tmp
+tmp_directory = os.path.join(parent_directory, 'tmp')
+###########################################End
 
 def get_resolution(file_path):
     dataset = gdal.Open(file_path)
@@ -96,7 +104,7 @@ def data_input(ImagePath, ShapefilePath):
             # 创建坐标系转换器
             transform = osr.CoordinateTransformation(source_srs, target_srs)
             # 创建输出栅格数据
-            output_file = f"./tmp/{tiff_name}"
+            output_file = f"{tmp_directory}/{tiff_name}"
             output_ds = gdal.Warp(output_file, input_ds, dstSRS=target_srs)
             # 关闭数据集
             input_ds = None
@@ -118,7 +126,7 @@ def data_input(ImagePath, ShapefilePath):
     vrt_list = []
     for i in range(len(grouped_image_paths)):
         sorted_paths = sort_image_paths_by_resolution(grouped_image_paths[i])
-        vrt_ds = gdal.BuildVRT(f"./tmp/vrt_ds{i}.vrt", sorted_paths, options=options)
+        vrt_ds = gdal.BuildVRT(f"{tmp_directory}/vrt_ds{i}.vrt", sorted_paths, options=options)
         vrt_list.append(vrt_ds)
 
     raster_crs = vrt_list[0].GetProjection()
@@ -129,10 +137,10 @@ def data_input(ImagePath, ShapefilePath):
     if vector_proj == raster_proj:
         return shapefile, vrt_list, img_points
     else:
-        VectorTranslate(ShapefilePath, "./tmp", format="ESRI Shapefile", dstSrsESPG=espg_list[0])
+        VectorTranslate(ShapefilePath, tmp_directory, format="ESRI Shapefile", dstSrsESPG=espg_list[0])
         file_name = os.path.basename(ShapefilePath)
         file_name_without_extension = os.path.splitext(file_name)[0]
-        shapefile_new = ogr.Open(f"./tmp/{file_name_without_extension}/{file_name}")
+        shapefile_new = ogr.Open(f"{tmp_directory}/{file_name_without_extension}/{file_name}")
         return shapefile_new, vrt_list, img_points
 
 

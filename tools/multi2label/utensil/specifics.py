@@ -3,13 +3,14 @@ from osgeo import gdal
 from osgeo import ogr
 import os
 
+###########################################Begin
 # 获取当前目录 utensil
 current_directory = os.path.dirname(__file__)
 # 获取上一级目录 multi2label
 parent_directory = os.path.dirname(current_directory)
 # 构造绝对路径 tmp
 tmp_directory = os.path.join(parent_directory, 'tmp')
-
+###########################################End
 
 def get_image_transform(img):
     transform = (img.GetGeoTransform())

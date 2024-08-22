@@ -47,10 +47,6 @@ def process_images_in_folder(input_folder, output_folder):
             process_image(image_path, output_folder)
 
 
-if __name__ == "__main__":
-    # 设置输入文件夹和输出文件夹路径
-    input_folder = r"P:\project_shp2label\output\road8_2-3\label"
-    output_folder = r"P:\project_shp2label\output\center"
-
+def main(input_path, output_path):
     # 处理文件夹中的所有图像
-    process_images_in_folder(input_folder, output_folder)
+    process_images_in_folder(input_path, output_path)

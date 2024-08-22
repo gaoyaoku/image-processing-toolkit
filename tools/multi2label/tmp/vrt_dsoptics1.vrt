@@ -1,0 +1,41 @@
+<VRTDataset rasterXSize="18192" rasterYSize="18164">
+  <SRS dataAxisToSRSAxisMapping="1,2">LOCAL_CS["unnamed",UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SRS>
+  <GeoTransform> -5.0000000000000000e-01,  1.0000000000000000e+00,  0.0000000000000000e+00,  5.0000000000000000e-01,  0.0000000000000000e+00, -1.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <NoDataValue>0</NoDataValue>
+    <HideNoDataValue>1</HideNoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/optics/gf1_4.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="18192" RasterYSize="18164" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="18192" ySize="18164" />
+      <DstRect xOff="0" yOff="0" xSize="18192" ySize="18164" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/optics/gf1_2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="18192" RasterYSize="18000" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="18192" ySize="18000" />
+      <DstRect xOff="0" yOff="0" xSize="18192" ySize="18000" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/optics/gf1_3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="18192" RasterYSize="18000" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="18192" ySize="18000" />
+      <DstRect xOff="0" yOff="0" xSize="18192" ySize="18000" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/Users/gaoyaoku/Documents/Datasets/path/optics/gf1_1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="18192" RasterYSize="18000" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="18192" ySize="18000" />
+      <DstRect xOff="0" yOff="0" xSize="18192" ySize="18000" />
+      <NODATA>0</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

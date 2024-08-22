@@ -30,11 +30,7 @@ def enhance_contrast(original_folder, enhanced_folder, contrast_factor = 2):
     print("所有 TIF 文件的对比度增强已完成，并保存在新的文件夹中。")
 
 
-if __name__ == "__main__":
-    # 示例用法
-    original_folder = r"P:\project_sar_road\data\road7_5\image_sar"
-    enhanced_folder = r"P:\project_sar_road\data\road7_8\image_sar"
-    contrast_factor = 2  # 可调整对比度增强因子
+def main(original_path, enhanced_path, contrast_factor = 2):
 
-    enhance_contrast(original_folder, enhanced_folder, contrast_factor)
+    enhance_contrast(original_path, enhanced_path, contrast_factor)
 

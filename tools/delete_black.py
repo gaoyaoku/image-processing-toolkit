@@ -67,13 +67,12 @@ def delete_unmatched_images(source_folder, reference_folder):
             os.remove(file_path)
 
 
-if __name__ == "__main__":
-    # 用法示例：
+def main(sar_path, optics_path, label_path, threshold=0.05):
     # 设置文件夹路径和阈值
-    optics_folder_path = r"P:\project_shp2label\output\road8_2-3\image_optics"
-    sar_folder_path = r"P:\project_shp2label\output\road8_2-3\image_sar"
-    label_folder_path = r"P:\project_shp2label\output\road8_2-3\label"
-    black_threshold = 0.05
+    optics_folder_path = optics_path
+    sar_folder_path = sar_path
+    label_folder_path = label_path
+    black_threshold = threshold
     # 先删除光学图像中黑色像素过多的图像
     delete_black_images(optics_folder_path, black_threshold)
     # 同时删除sar和标签中对应的图像
